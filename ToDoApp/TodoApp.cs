@@ -10,11 +10,11 @@ namespace ToDoApp
         string fileLocation = "todo-items.txt";
         List<TodoItem> items = new List<TodoItem>();
         readonly string helpOutput = @"Options
-    Add [item]  Add a item to the todo application
-    Do #[number] Complete a given item
-    Print       Print all todo items
-    Help        Show the help options
-    Exit        Exit the command line application";
+    Add [item]      Add a item to the todo application
+    Do #[number]    Complete a given item
+    Print           Print all todo items
+    Help            Show the help options
+    Exit            Exit the command line application";
 
         public TodoApp()
         {
