@@ -14,7 +14,7 @@ namespace ToDoApp
             Console.Write(">");
 
             string inputLine = Console.ReadLine();
-            while (!inputLine.Equals("") && !inputLine.Equals("exit"))
+            while (!inputLine.Equals("") && !inputLine.ToLower().Equals("exit"))
             {
                 if (inputLine.StartsWith("Add "))
                 {
@@ -48,7 +48,7 @@ namespace ToDoApp
                 else
                 {
                     // If the user type something that is not recognised by the program
-                    Console.WriteLine("Command not recognised, type help to see all options" + inputLine);
+                    Console.WriteLine("Command not recognised, type help to see all options");
                 }
 
                 // Write a command line terminal symbol

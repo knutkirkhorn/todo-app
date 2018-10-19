@@ -11,7 +11,7 @@ namespace ToDoApp.Tests
         public void AddAndPrintTest()
         {
             TodoApp todoApp = new TodoApp();
-            todoApp.useTestEnvironment();
+            todoApp.UseTestEnvironment();
 
             // Retrieve output to command line, redirect it to the String Writer
             using (StringWriter sw = new StringWriter())

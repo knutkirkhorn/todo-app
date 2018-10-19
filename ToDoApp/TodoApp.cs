@@ -9,24 +9,25 @@ namespace ToDoApp
     {
         string fileLocation = "todo-items.txt";
         List<TodoItem> items = new List<TodoItem>();
-        string helpOutput = @"Options
+        readonly string helpOutput = @"Options
     Add [item]  Add a item to the todo application
     Do #[number] Complete a given item
     Print       Print all todo items
-    Help        Show the help options";
+    Help        Show the help options
+    Exit        Exit the command line application";
 
         public TodoApp()
         {
-            loadItems();
+            LoadItems();
         }
 
-        public void useTestEnvironment()
+        public void UseTestEnvironment()
         {
             fileLocation = "todo-items-test.txt";
             items.Clear();
         }
 
-        void loadItems()
+        void LoadItems()
         {
             // Check if file exists and read the content if it exists
             if (File.Exists(fileLocation))
@@ -42,7 +43,7 @@ namespace ToDoApp
             }
         }
 
-        void saveItems()
+        void SaveItems()
         {
             List<string> allItems = new List<string>();
             foreach (TodoItem item in items)
@@ -65,7 +66,7 @@ namespace ToDoApp
             TodoItem newItem = new TodoItem(text, newNumber);
             items.Add(newItem);
             Console.WriteLine(newItem);
-            saveItems();
+            SaveItems();
         }
 
         public void Do(int number)
@@ -82,7 +83,7 @@ namespace ToDoApp
                     items.Remove(item);
 
                     // Save new list
-                    saveItems();
+                    SaveItems();
                     break;
                 }
             }
