@@ -13,7 +13,7 @@ namespace ToDoApp
     Add [item]      Add a item to the todo application
     Do #[number]    Complete a given item
     Print           Print all todo items
-    Help            Show the help options
+    Help            Show all possible options
     Exit            Exit the command line application";
 
         public TodoApp()
