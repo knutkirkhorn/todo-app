@@ -6,7 +6,6 @@ All todo tasks are stored locally in a file between runs.
 ## Usage
 ```
     Usage
-    $ btc-value
     Options
         Add [item]      Add a item to the todo application
         Do #[number]    Complete a given item
