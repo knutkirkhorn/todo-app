@@ -14,8 +14,6 @@ All todo tasks are stored locally in a file between runs.
         Exit            Exit the command line application
 
     Examples
-    > Add Apply to DIPS
-        $16258
     >Add Apply to DIPS
     12 Apply to DIPS
     >Add Complete assignment
