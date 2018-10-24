@@ -15,7 +15,7 @@ All todo tasks are stored locally in a file between runs.
 
     Examples
     >Add Apply to DIPS
-    12 Apply to DIPS
+    #1 Apply to DIPS
     >Add Complete assignment
     #2 Complete assignment
     >Print
