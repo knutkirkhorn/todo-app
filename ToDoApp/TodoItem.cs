@@ -1,6 +1,6 @@
 ﻿namespace ToDoApp
 {
-    class TodoItem
+    internal class TodoItem
     {
         public TodoItem(string text, int number)
         {

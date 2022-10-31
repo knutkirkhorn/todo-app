@@ -2,24 +2,24 @@
 
 namespace ToDoApp
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            TodoApp app = new TodoApp();
+            var app = new TodoApp();
 
             Console.WriteLine("Type help to show options");
 
             // Write a command line terminal symbol
             Console.Write(">");
 
-            string inputLine = Console.ReadLine();
-            while (!inputLine.Equals("") && !inputLine.ToLower().Equals("exit"))
+            var inputLine = Console.ReadLine();
+            while (inputLine != null && !inputLine.Equals("") && !inputLine.ToLower().Equals("exit"))
             {
                 if (inputLine.StartsWith("Add "))
                 {
                     // If the user wants to add a item
-                    string text = inputLine.Split(new[] { "Add " }, StringSplitOptions.None)[1];
+                    var text = inputLine.Split(new[] { "Add " }, StringSplitOptions.None)[1];
                     app.Add(text);
                 }
                 else if (inputLine.StartsWith("Do #"))
@@ -27,7 +27,7 @@ namespace ToDoApp
                     // If the user wants to set a item to done
                     try
                     {
-                        int doNumber = int.Parse(inputLine.Split(new[] { "Do #" }, StringSplitOptions.None)[1]);
+                        var doNumber = int.Parse(inputLine.Split(new[] { "Do #" }, StringSplitOptions.None)[1]);
                         app.Do(doNumber);
                     }
                     catch (FormatException)
